@@ -5,11 +5,11 @@
 <title>Encrypt / Decrypt Online </title>
 
 <script src="https://kit.fontawesome.com/99429a2135.js" crossorigin="anonymous"></script>
-<link rel="icon" type="image/x-icon" href="images/fav.jpeg">
+<link rel="icon" type="image/x-icon" href="../static/images/fav.jpeg">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- <link rel="stylesheet" href="css/bootstrap.css">
- <link rel="stylesheet" href="css/newstyle.css">
+ <link rel="stylesheet" href="../static/css/bootstrap.css">
+ <link rel="stylesheet" href="../static/css/newstyle.css">
  
 </head>
 <body>
@@ -53,13 +53,15 @@
 </div>
 
 <div class="form-floating" style="width: 50%;">
-    <textarea class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea2" style="height: 200px"></textarea>
+    <textarea method="post" action="/encrypt" class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea2" style="height: 200px"></textarea>
     <label for="floatingTextarea2">Enter Your Text Here</label>
   </div>
 
   <div class="form-floating" style="width: 50%;">
     <textarea class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea3" style="height: 200px" disabled></textarea>
     <label for="floatingTextarea3">Result / Output</label>
+    <p>Encrypted Text: {{ encrypted_text }}</p>
+    <p>Decrypted Text: {{ decrypted_text }}</p>
   </div>
 
   <div class="form-check form-switch pt-3 ">
@@ -69,14 +71,14 @@
     <br>
     <div class="input-group flex-nowrap " style="width: 50%; margin-left: -30px;">
         <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
-        <input type="password" class="form-control" placeholder="Secret Key" aria-label="Secret Key" aria-describedby="addon-wrapping">
+        <input for="key" type="password" class="form-control" placeholder="Secret Key" aria-label="Secret Key" aria-describedby="addon-wrapping">
       </div>
   </div>
   <br>
   <br>
   <div style="padding-top: 20px;">
-    <button type="button" class="btn btn-outline-primary btn-lg " id="actionbtnn">Encrypt</button>
-    <button type="button" class="btn btn-outline-primary btn-lg " id="actionbtnn">Decrypt</button>
+    <button type="submit" class="btn btn-outline-primary btn-lg " id="actionbtnn">Encrypt</button>
+    <button type="submit" class="btn btn-outline-primary btn-lg " id="actionbtnn">Decrypt</button>
   </div>
   
 
