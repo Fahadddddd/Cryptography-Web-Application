@@ -42,7 +42,7 @@ The app consists of the following files:
 
 * `app.py`: The main Flask app file.
 * `layout.html`: The HTML template for the app's layout.
-* `static`: This Folder Contains Cascading Style Sheets And Images Used I the UI of the Web App.
+* `static`: This Folder Contains Cascading Style Sheets And Images Used in the UI of the Web App.
 
 <!-- The `app.py` file contains the following code:
 
