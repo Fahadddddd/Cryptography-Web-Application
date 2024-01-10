@@ -51,19 +51,25 @@
 <div class="col-md-12">
 <h2 class="section-head">Enter Text To Encrypt / Decrypt </h2>
 </div>
-
-<div class="form-floating" style="width: 50%;">
-    <textarea method="post" action="/encrypt" class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea2" style="height: 200px"></textarea>
+<form method="post" action="/encrypt">
+<div class="d-flex">
+<div class="form-floating" style="width: 50%;margin-right: 10px;">
+    <textarea name="floatingTextarea2" class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea2" style="height: 200px"></textarea>
     <label for="floatingTextarea2">Enter Your Text Here</label>
   </div>
 
-  <div class="form-floating" style="width: 50%;">
+  <div class="form-floating" style="width: 50%;margin-left: 10px;">
     <textarea class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea3" style="height: 200px" disabled></textarea>
-    <label for="floatingTextarea3">Result / Output</label>
-    <p>Encrypted Text: {{ encrypted_text }}</p>
-    <p>Decrypted Text: {{ decrypted_text }}</p>
+    <label for="floatingTextarea3">Result / Output
+      
+      <p>Encrypted Text: {{ encrypted_text }}</p>
+      <p>Decrypted Text: {{ decrypted_text }}</p>
+    </label>
+    
+    
+    
   </div>
-
+</div>
   <div class="form-check form-switch pt-3 ">
     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
     <label class="form-check-label" for="flexSwitchCheckDefault">Encrypt / Decrypt With a custom secret key </label>
@@ -71,15 +77,17 @@
     <br>
     <div class="input-group flex-nowrap " style="width: 50%; margin-left: -30px;">
         <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
-        <input for="key" type="password" class="form-control" placeholder="Secret Key" aria-label="Secret Key" aria-describedby="addon-wrapping">
+        <input name="key" type="password" class="form-control" placeholder="Secret Key" aria-label="Secret Key" aria-describedby="addon-wrapping">
       </div>
   </div>
   <br>
   <br>
   <div style="padding-top: 20px;">
-    <button type="submit" class="btn btn-outline-primary btn-lg " id="actionbtnn">Encrypt</button>
-    <button type="submit" class="btn btn-outline-primary btn-lg " id="actionbtnn">Decrypt</button>
+    <button  name="action" value="encrypt" class="btn btn-outline-primary btn-lg " id="actionbtnn">Encrypt</button>
+    <button  name="action"  value="decrypt" class="btn btn-outline-primary btn-lg " id="actionbtnn">Decrypt</button>
   </div>
+
+</form>
   
 
  
@@ -153,4 +161,6 @@ Project Title : Create a Application To Encrypt / Decrypt Texts.
 
 
 </body>
+
+
 </html>
