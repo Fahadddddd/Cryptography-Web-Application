@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import base64
-app = Flask(__name__)
+app = Flask('Cryptography-web-app')
 
 def xor_encrypt_decrypt(data, key):
     encrypted_data = bytearray()
@@ -37,7 +37,7 @@ def encrypt():
         decrypted_text = decrypted_data.decode('utf-8')
         return render_template('layout.html', decrypted_text=decrypted_text)
     else:
-        # Handle other cases or errors
+        
         return render_template('layout.html')
     
 

@@ -10,6 +10,7 @@
 
  <link rel="stylesheet" href="../static/css/bootstrap.css">
  <link rel="stylesheet" href="../static/css/newstyle.css">
+ <script src="../static/js/script.js"></script>
  
 </head>
 <body>
@@ -59,13 +60,14 @@
   </div>
 
   <div class="form-floating" style="width: 50%;margin-left: 10px;">
-    <textarea class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea3" style="height: 200px" disabled></textarea>
+    <textarea type="text" class="form-control" placeholder="Enter Your Text Here" id="floatingTextarea3" style="height: 200px" disabled></textarea>
     <label for="floatingTextarea3">Result / Output
       
-      <p>Encrypted Text: {{ encrypted_text }}</p>
-      <p>Decrypted Text: {{ decrypted_text }}</p>
+      <p id="content">{{ encrypted_text }}</p>
+      <p id="content">{{ decrypted_text }}</p>
     </label>
     
+    <button  onclick="copyfunction()" class="btn btn-outline-primary btn-lg " id="copybtnn"><i class="fa-solid fa-copy"></i></button>
     
     
   </div>
