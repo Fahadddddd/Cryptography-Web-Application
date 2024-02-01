@@ -28,7 +28,7 @@ This repository contains the code for a simple web application that allows users
 To use the app, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the required Python packages by running `pip install -r requirements.txt`.
+2. Install the required Python packages by running `pip install Flask`.
 3. Start the app by running `python app.py`.
 4. Open your web browser and navigate to `localhost:5000`.
 5. Enter the text you want to encrypt or decrypt in the "Text" field.
@@ -42,7 +42,7 @@ The app consists of the following files:
 
 * `app.py`: The main Flask app file.
 * `layout.html`: The HTML template for the app's layout.
-* `static`: This Folder Contains Cascading Style Sheets And Images Used I the UI of the Web App.
+* `static`: This Folder Contains Cascading Style Sheets And Images Used in the UI of the Web App.
 
 <!-- The `app.py` file contains the following code:
 
