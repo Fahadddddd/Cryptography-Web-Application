@@ -8,3 +8,9 @@ function copyfunction(){
     alert("Copied the text: " + copyText);
 
 }
+
+
+// document.getElementById('myForm').addEventListener('submit', function(event) {
+//     // Prevent the default form submission behavior
+//     event.preventDefault();
+// })
